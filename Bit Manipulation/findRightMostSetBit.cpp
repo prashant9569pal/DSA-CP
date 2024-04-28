@@ -7,10 +7,9 @@ using namespace std;
 const int MOD = 1e9 + 7;
 const int INF = LLONG_MAX / 2;
 
-int findRightMostSetBit(int n)
+int rightMostSetBit(int n)
 {
-    int index = (n & (n - 1)) ^ n;
-    return index;
+    return (n & (n - 1) ^ n);
 }
 
 signed main()
