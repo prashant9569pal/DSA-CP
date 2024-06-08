@@ -1,0 +1,10 @@
+// Program to find the middle of the linked list using slow and fast
+void printMiddle(Node * head){
+    if(head==NULL)return;
+    Node *slow=head,*fast=head;
+    while(fast!=NULL&&fast->next!=NULL){
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    cout<<slow->data;
+}
